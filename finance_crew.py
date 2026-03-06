@@ -16,10 +16,7 @@ class QueryAnalysisOutput(BaseModel):
     timeframe: str = Field(..., description="Time period (e.g., '1d', '1mo', '1y').")
     action: str = Field(..., description="Action to be performed (e.g., 'fetch', 'plot').")
 
-llm = LLM(
-    model="groq/llama-3.2-90b-text-preview",
-    temperature=0.7
-)
+llm = LLM(model="groq/llama-3.1-8b-instant", api_key=os.environ.get("GROQ_API_KEY"))
 
 # 1) Query parser agent
 query_parser_agent = Agent(
