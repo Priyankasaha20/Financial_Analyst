@@ -58,6 +58,7 @@ def run_code_and_show_plot() -> str:
     with open('stock_analysis.py', 'r') as f:
         exec(f.read())
 
+        
 # Run the server locally
 if __name__ == "__main__":
     mcp.run(transport='stdio')
