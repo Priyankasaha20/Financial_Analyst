@@ -21,11 +21,6 @@ llm = LLM(
     temperature=0.7
 )
 
-# llm = LLM(
-#     model="openai/gpt-4o",
-#     # temperature=0.7
-# )
-
 # 1) Query parser agent
 query_parser_agent = Agent(
     role="Stock Data Analyst",
